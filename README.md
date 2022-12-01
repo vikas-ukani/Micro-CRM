@@ -1,64 +1,127 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Micro-CRM
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## About the project
+This project is all about managing an Micro CRM for Company and it's employee management system.
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Features
+This project is responsible for handling and managing company and employee details.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Database Migrations
+- Database Factory
+- Database Seeder
+- Authentication
+- Company Create Update Delete and View details
+- Employee Create Update Delete and View details
+- Pagination Implementation
+- Database RelationShip
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## Preview
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Login Screen
+![Login](https://i.imgur.com/AvhEJ23.png)
 
-### Premium Partners
+- Home Page
+![Home Page](https://i.imgur.com/Qmght3L.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- Company Page
+![Company Page](https://i.imgur.com/2tRETqP.png)
 
-## Contributing
+- Company Create Page
+![Company Create Page](https://i.imgur.com/wbobXtM.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Company View Page
+![Company View Page](https://i.imgur.com/X5OApFP.png)
 
-## Code of Conduct
+- Company Update Page
+![Company Update Page](https://i.imgur.com/olBVLd8.png)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Employees Page
+![Employees Page](https://i.imgur.com/X80vMaP.png)
 
-## Security Vulnerabilities
+- Employees Create Page
+![Employees Create Page](https://i.imgur.com/gHX7QKc.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Employees View Page
+![Employees View Page](https://i.imgur.com/9xPo4YR.png)
 
-## License
+- Employees Update Page
+![Employees Update Page](https://i.imgur.com/ui2uygg.png)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+- Employees List Page with Pagination
+![Employees List Page with Pagination](https://i.imgur.com/YgMTAQO.png)
+
+
+---
+
+## Installation Process
+
+### Clone this repo via below command,
+```
+git clone https://github.com/vikas-ukani/Micro-CRM
+```
+
+### Copy .env file from .env.example
+```
+cp .env.example .env
+```
+
+### Edit .env  and Set Database Configurations.
+```
+DB_CONNECTION=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=company-crm
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+
+### Install Packages
+```
+composer install 
+```
+
+
+### Generate app key
+```
+php artisan key:generate
+```
+### Link Image storage directory to public and allow permissions.
+```
+php artisan storage:link
+```
+
+### Migrate database
+```
+php artisan migrate
+```
+
+OR with `--seed` flag to seed the database
+
+```
+php artisan migrate --seed
+```
+
+### Seed Data
+```
+php artisan db:seed
+```
+
+- It will create categories and random books factory data to testing more.
+
+### Run the Project
+```
+php artisan serve
+```
+
+
+### Run Node modules and generate bootstrap css
+```
+npm install && npm run dev
+```
