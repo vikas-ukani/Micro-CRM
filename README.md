@@ -87,7 +87,7 @@ DB_PASSWORD=root
 composer install 
 ```
 
-
+- You can find the `company-crm.sql` database inside `database` directory. 
 ### Generate app key
 ```
 php artisan key:generate
